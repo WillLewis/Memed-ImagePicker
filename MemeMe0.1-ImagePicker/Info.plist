@@ -44,9 +44,13 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
+	<array/>
+	<key>NSCameraUsageDescription</key>
+	<string>MemeMe0.1 uses the camera to take pictures of images that are edited by the user</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>MemeMe0.1 uses the photo library to pick photos that are edited by the user to return memes</string>
+	<key>NSSave</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

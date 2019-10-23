@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30EBE54D8D030A67CFBF41D6 /* Pods_MemeMe0_1_ImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3052BB3705983F80B2922B08 /* Pods_MemeMe0_1_ImagePicker.framework */; };
 		7766F845235A1718002EE2AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766F844235A1718002EE2AB /* AppDelegate.swift */; };
 		7766F847235A1718002EE2AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766F846235A1718002EE2AB /* SceneDelegate.swift */; };
 		7766F849235A1718002EE2AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766F848235A1718002EE2AB /* ViewController.swift */; };
@@ -14,6 +15,7 @@
 		7766F84E235A171A002EE2AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7766F84D235A171A002EE2AB /* Assets.xcassets */; };
 		7766F851235A171A002EE2AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7766F84F235A171A002EE2AB /* LaunchScreen.storyboard */; };
 		7766F85C235A171A002EE2AB /* MemeMe0_1_ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766F85B235A171A002EE2AB /* MemeMe0_1_ImagePickerTests.swift */; };
+		CC5E6018DEB0377789A61BDD /* Pods_MemeMe0_1_ImagePickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E900C2D4B9037AF106C8C3D5 /* Pods_MemeMe0_1_ImagePickerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7766F841235A1718002EE2AB /* MemeMe0.1-ImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MemeMe0.1-ImagePicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3052BB3705983F80B2922B08 /* Pods_MemeMe0_1_ImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemeMe0_1_ImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52BD7192683211853F3148E4 /* Pods-MemeMe0.1-ImagePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeMe0.1-ImagePicker.debug.xcconfig"; path = "Target Support Files/Pods-MemeMe0.1-ImagePicker/Pods-MemeMe0.1-ImagePicker.debug.xcconfig"; sourceTree = "<group>"; };
+		666EF9CCCA492B82BB0D85EF /* Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig"; path = "Target Support Files/Pods-MemeMe0.1-ImagePickerTests/Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7766F841235A1718002EE2AB /* MemeMe0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe0.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7766F844235A1718002EE2AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7766F846235A1718002EE2AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7766F848235A1718002EE2AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		7766F857235A171A002EE2AB /* MemeMe0.1-ImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MemeMe0.1-ImagePickerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7766F85B235A171A002EE2AB /* MemeMe0_1_ImagePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe0_1_ImagePickerTests.swift; sourceTree = "<group>"; };
 		7766F85D235A171A002EE2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DFE34C610638B08805DACC3 /* Pods-MemeMe0.1-ImagePickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeMe0.1-ImagePickerTests.release.xcconfig"; path = "Target Support Files/Pods-MemeMe0.1-ImagePickerTests/Pods-MemeMe0.1-ImagePickerTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBA6341FAC2CAA423A30DB5A /* Pods-MemeMe0.1-ImagePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeMe0.1-ImagePicker.release.xcconfig"; path = "Target Support Files/Pods-MemeMe0.1-ImagePicker/Pods-MemeMe0.1-ImagePicker.release.xcconfig"; sourceTree = "<group>"; };
+		E900C2D4B9037AF106C8C3D5 /* Pods_MemeMe0_1_ImagePickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemeMe0_1_ImagePickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30EBE54D8D030A67CFBF41D6 /* Pods_MemeMe0_1_ImagePicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,25 +61,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5E6018DEB0377789A61BDD /* Pods_MemeMe0_1_ImagePickerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B208507F0AC20732609DFFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52BD7192683211853F3148E4 /* Pods-MemeMe0.1-ImagePicker.debug.xcconfig */,
+				BBA6341FAC2CAA423A30DB5A /* Pods-MemeMe0.1-ImagePicker.release.xcconfig */,
+				666EF9CCCA492B82BB0D85EF /* Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig */,
+				9DFE34C610638B08805DACC3 /* Pods-MemeMe0.1-ImagePickerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7766F838235A1718002EE2AB = {
 			isa = PBXGroup;
 			children = (
 				7766F843235A1718002EE2AB /* MemeMe0.1-ImagePicker */,
 				7766F85A235A171A002EE2AB /* MemeMe0.1-ImagePickerTests */,
 				7766F842235A1718002EE2AB /* Products */,
+				5B208507F0AC20732609DFFE /* Pods */,
+				F6FE85A549E60AA3AD284583 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7766F842235A1718002EE2AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7766F841235A1718002EE2AB /* MemeMe0.1-ImagePicker.app */,
+				7766F841235A1718002EE2AB /* MemeMe0.1.app */,
 				7766F857235A171A002EE2AB /* MemeMe0.1-ImagePickerTests.xctest */,
 			);
 			name = Products;
@@ -99,6 +122,15 @@
 			path = "MemeMe0.1-ImagePickerTests";
 			sourceTree = "<group>";
 		};
+		F6FE85A549E60AA3AD284583 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3052BB3705983F80B2922B08 /* Pods_MemeMe0_1_ImagePicker.framework */,
+				E900C2D4B9037AF106C8C3D5 /* Pods_MemeMe0_1_ImagePickerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7766F860235A171A002EE2AB /* Build configuration list for PBXNativeTarget "MemeMe0.1-ImagePicker" */;
 			buildPhases = (
+				B9316B3FFDA7F42882A12E13 /* [CP] Check Pods Manifest.lock */,
 				7766F83D235A1718002EE2AB /* Sources */,
 				7766F83E235A1718002EE2AB /* Frameworks */,
 				7766F83F235A1718002EE2AB /* Resources */,
+				567CCDC0CE6CC022EC2D1023 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -116,13 +150,14 @@
 			);
 			name = "MemeMe0.1-ImagePicker";
 			productName = "MemeMe0.1-ImagePicker";
-			productReference = 7766F841235A1718002EE2AB /* MemeMe0.1-ImagePicker.app */;
+			productReference = 7766F841235A1718002EE2AB /* MemeMe0.1.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7766F856235A171A002EE2AB /* MemeMe0.1-ImagePickerTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7766F863235A171A002EE2AB /* Build configuration list for PBXNativeTarget "MemeMe0.1-ImagePickerTests" */;
 			buildPhases = (
+				1DE618E97A1707782629C3D6 /* [CP] Check Pods Manifest.lock */,
 				7766F853235A171A002EE2AB /* Sources */,
 				7766F854235A171A002EE2AB /* Frameworks */,
 				7766F855235A171A002EE2AB /* Resources */,
@@ -194,6 +229,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DE618E97A1707782629C3D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemeMe0.1-ImagePickerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		567CCDC0CE6CC022EC2D1023 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemeMe0.1-ImagePicker/Pods-MemeMe0.1-ImagePicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemeMe0.1-ImagePicker/Pods-MemeMe0.1-ImagePicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemeMe0.1-ImagePicker/Pods-MemeMe0.1-ImagePicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9316B3FFDA7F42882A12E13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemeMe0.1-ImagePicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7766F83D235A1718002EE2AB /* Sources */ = {
@@ -360,16 +459,18 @@
 		};
 		7766F861235A171A002EE2AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52BD7192683211853F3148E4 /* Pods-MemeMe0.1-ImagePicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDM9YLDF92;
 				INFOPLIST_FILE = "MemeMe0.1-ImagePicker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.williamlewis.MemeMe0-1-ImagePicker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MemeMe0.1;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,16 +478,18 @@
 		};
 		7766F862235A171A002EE2AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBA6341FAC2CAA423A30DB5A /* Pods-MemeMe0.1-ImagePicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDM9YLDF92;
 				INFOPLIST_FILE = "MemeMe0.1-ImagePicker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.williamlewis.MemeMe0-1-ImagePicker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MemeMe0.1;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,6 +497,7 @@
 		};
 		7766F864235A171A002EE2AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 666EF9CCCA492B82BB0D85EF /* Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +519,7 @@
 		};
 		7766F865235A171A002EE2AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DFE34C610638B08805DACC3 /* Pods-MemeMe0.1-ImagePickerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

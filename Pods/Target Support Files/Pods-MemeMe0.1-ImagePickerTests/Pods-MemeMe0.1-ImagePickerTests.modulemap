@@ -1,0 +1,6 @@
+framework module Pods_MemeMe0_1_ImagePickerTests {
+  umbrella header "Pods-MemeMe0.1-ImagePickerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

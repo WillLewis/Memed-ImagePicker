@@ -7,14 +7,19 @@
 //
 
 import UIKit
+//import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Added by WL to fix view from pushing up when keyboard does and hiding the first line of text
+        //removed because it fucks up other stuff that we have to have for he assignment
+        //IQKeyboardManager.shared.enable = true
+        
+        
         return true
     }
 

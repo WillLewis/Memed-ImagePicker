@@ -12,14 +12,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //MARK: Properties
     var activeField: UITextField? //used to set keyboard notifications only if bottom text field chosen
-    /*
-    let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor: UIColor.black,
-        NSAttributedString.Key.foregroundColor: UIColor.white,
-        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth: -3
-    ]
-    */
     
     struct Meme {
         var topText: String
@@ -62,7 +54,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         unsubscribeFromKeyboardNotifications()
     }
     
-    
     //MARK: Actions
     @IBAction func pickAnImage(_ sender: Any) {
         getImage(.photoLibrary)
@@ -78,7 +69,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let activityController = UIActivityViewController(activityItems: [sharedImage], applicationActivities: nil)
         self.present(activityController, animated: true, completion: nil)
         activityController.completionWithItemsHandler = { (activity, success, items, error) in
+            if success {
                 self.save()
+            }
         }
     }
     

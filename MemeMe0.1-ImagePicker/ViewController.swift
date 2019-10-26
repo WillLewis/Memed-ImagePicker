@@ -12,13 +12,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //MARK: Properties
     var activeField: UITextField? //used to set keyboard notifications only if bottom text field chosen
-    
+    /*
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
         NSAttributedString.Key.strokeWidth: -3
     ]
+    */
     
     struct Meme {
         var topText: String
@@ -42,6 +43,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
 
         //sets the delegates
+        configureTextField(topText, text: "TOP")
+        configureTextField(bottomText, text: "BOTTOM")
+        
+        /*
         self.topText.delegate = self
         self.bottomText.delegate = self
         topText.defaultTextAttributes = memeTextAttributes
@@ -51,6 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomText.text = "BOTTOM"
         topText.textAlignment = .center
         bottomText.textAlignment = .center
+        */
         
         //cant go in viewWillAppear because thats reset everytime a pic is taken with camera
         self.shareButton.isEnabled = false
@@ -116,32 +122,47 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
        
     //MARK: Text Delegate Methods
-        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    //sets the delegates for text fields, adds default text, and sets the attributes
+    func configureTextField(_ textField: UITextField, text: String) {
+               textField.text = text
+               textField.delegate = self
+               textField.defaultTextAttributes = [
+                   .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+                   .foregroundColor: UIColor.white,
+                   .strokeColor: UIColor.black,
+                   .strokeWidth: -3
+               ]
+               textField.textAlignment = .center
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
             var newText = textField.text! as NSString
             newText = newText.replacingCharacters(in: range, with: string) as NSString
             return newText.length <= 30
-        }
+    }
         
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            activeField = textField
-            if textField.text == "TOP" {
-                textField.text = ""
-            } else if textField.text == "BOTTOM" {
-                     textField.text = ""
-                }
-            }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        activeField = textField
+        if textField.text == "TOP" {
+            textField.text = ""
+        } else if textField.text == "BOTTOM" {
+            textField.text = ""
+        }
+    }
     
-        func textFieldDidEndEditing(_ textField: UITextField){
-                activeField = nil
-            }
+    func textFieldDidEndEditing(_ textField: UITextField){
+        activeField = nil
+    }
         
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     
     //MARK: Helper Functions
+    
+   
     
     //enables cancel and share buttons and presents view
     func prepButtonsPresentImage(_ controllerName: UIImagePickerController) {

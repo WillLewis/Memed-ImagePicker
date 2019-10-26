@@ -42,21 +42,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //sets the delegates
+        //sets the delegates, adds default text, and sets the attributes
         configureTextField(topText, text: "TOP")
         configureTextField(bottomText, text: "BOTTOM")
-        
-        /*
-        self.topText.delegate = self
-        self.bottomText.delegate = self
-        topText.defaultTextAttributes = memeTextAttributes
-        bottomText.defaultTextAttributes = memeTextAttributes
-        
-        topText.text = "TOP"
-        bottomText.text = "BOTTOM"
-        topText.textAlignment = .center
-        bottomText.textAlignment = .center
-        */
         
         //cant go in viewWillAppear because thats reset everytime a pic is taken with camera
         self.shareButton.isEnabled = false
@@ -77,17 +65,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //MARK: Actions
     @IBAction func pickAnImage(_ sender: Any) {
-        let controllerName = UIImagePickerController()
-        controllerName.delegate = self
-        controllerName.sourceType = .photoLibrary
-        prepButtonsPresentImage(controllerName)
+        getImage(.photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        let controllerName = UIImagePickerController()
-        controllerName.delegate = self
-        controllerName.sourceType = .camera
-        prepButtonsPresentImage(controllerName)
+        getImage(.camera)
     }
     
     @IBAction func Share(_ sender: Any) {
@@ -161,7 +143,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     //MARK: Helper Functions
-    
+    //sets delegate, enables buttons and presents image
+    func getImage(_ source: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = source
+        self.shareButton.isEnabled = true
+        self.cancelButton.isEnabled = true
+        present(pickerController, animated: true, completion: nil)
+    }
    
     
     //enables cancel and share buttons and presents view

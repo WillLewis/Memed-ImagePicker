@@ -10,10 +10,10 @@ import UIKit
 
 class MemeTableViewController: UITableViewController {
     
-    var memes: [Meme]! {
+    var memes: [AppDelegate.Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
-        return appDelegate.memes
+        return appDelegate.memesArray
     }
 
     
@@ -29,7 +29,6 @@ class MemeTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.tableView.reloadData()
     }
 
@@ -42,13 +41,13 @@ class MemeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return memesArray.count
+        return memes.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell")!
-        let specificMeme = memesArray[(indexPath as NSIndexPath).row]
+        let specificMeme = memes[(indexPath as NSIndexPath).row]
         
         cell.textLabel?.text = specificMeme.topText
         cell.imageView?.image =  specificMeme.memedImage

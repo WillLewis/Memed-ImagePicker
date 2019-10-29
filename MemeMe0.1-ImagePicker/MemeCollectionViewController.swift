@@ -11,10 +11,10 @@ import Foundation
 
 class MemeCollectionViewController: UICollectionViewController {
     
-    var memes: [Meme]! {
+    var memes: [AppDelegate.Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
-        return appDelegate.memes
+        return appDelegate.memesArray
     }
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class MemeCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionCell", for: indexPath) as! MemeCollectionViewCell
-        let specificMeme = memesArray[(indexPath as NSIndexPath).row]
+        let specificMeme = memes[(indexPath as NSIndexPath).row]
 
         // Set the name and image
         cell.memeImageView.image = specificMeme.memedImage

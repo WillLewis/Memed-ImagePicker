@@ -46,7 +46,7 @@ class MemeTableViewController: UITableViewController {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         detailController.specificMeme = self.memes[(indexPath as NSIndexPath).row]
-        //self.navigationController!.popViewController(animated: true)
+        //self.navigationController!.popToViewController(MemeDetailViewController() as UIViewController, animated: true)
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }

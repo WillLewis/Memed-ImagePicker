@@ -22,18 +22,23 @@ class MemeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let space:CGFloat = 1.5
-        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        let space:CGFloat = 2.0
+        let dimension = (view.frame.size.width - (2 * space)) / 2.0
+        let dimension2 = (view.frame.size.height - (2 * space)) / 4.0
 
         flowLayout.minimumInteritemSpacing = space
-        flowLayout.minimumLineSpacing = space   //spacing btw rows
+        flowLayout.minimumLineSpacing = space  //spacing btw rows
         //item size based on the view frame size so it can easily work for other size screens
-        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension2)
+        //flowLayout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView?.reloadData()
+        
         self.tabBarController?.tabBar.isHidden = false
       
     }
@@ -53,7 +58,17 @@ class MemeCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
+        
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        detailController.specificMeme = self.memes[(indexPath as NSIndexPath).row]
+       
+        //self.present(detailController, animated: true, completion: nil)
+        self.navigationController!.popViewController(animated: true)
+        self.navigationController!.pushViewController(detailController, animated: true)
+        
+        
+    }
     
 
  

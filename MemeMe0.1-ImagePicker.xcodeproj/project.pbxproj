@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30EBE54D8D030A67CFBF41D6 /* Pods_MemeMe0_1_ImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3052BB3705983F80B2922B08 /* Pods_MemeMe0_1_ImagePicker.framework */; };
+		77485540236A0D2300A372FA /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748553F236A0D2300A372FA /* MemeDetailViewController.swift */; };
 		7766F845235A1718002EE2AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766F844235A1718002EE2AB /* AppDelegate.swift */; };
 		7766F847235A1718002EE2AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766F846235A1718002EE2AB /* SceneDelegate.swift */; };
 		7766F84C235A1718002EE2AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7766F84A235A1718002EE2AB /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		3052BB3705983F80B2922B08 /* Pods_MemeMe0_1_ImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemeMe0_1_ImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BD7192683211853F3148E4 /* Pods-MemeMe0.1-ImagePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeMe0.1-ImagePicker.debug.xcconfig"; path = "Target Support Files/Pods-MemeMe0.1-ImagePicker/Pods-MemeMe0.1-ImagePicker.debug.xcconfig"; sourceTree = "<group>"; };
 		666EF9CCCA492B82BB0D85EF /* Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig"; path = "Target Support Files/Pods-MemeMe0.1-ImagePickerTests/Pods-MemeMe0.1-ImagePickerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7748553F236A0D2300A372FA /* MemeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 		7766F841235A1718002EE2AB /* MemeMe0.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe0.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7766F844235A1718002EE2AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7766F846235A1718002EE2AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,11 +115,12 @@
 				7766F844235A1718002EE2AB /* AppDelegate.swift */,
 				7766F846235A1718002EE2AB /* SceneDelegate.swift */,
 				77B2CF902364F36500615514 /* EditViewController.swift */,
-				776F88B32367D4CD007CEAD8 /* Meme.swift */,
 				7766F84A235A1718002EE2AB /* Main.storyboard */,
-				77ADF5DA23679CED00A21BF4 /* MemeCollectionViewController.swift */,
 				776F88B12367CAF9007CEAD8 /* MemeTableViewController.swift */,
+				77ADF5DA23679CED00A21BF4 /* MemeCollectionViewController.swift */,
 				77ADF5E02367C40500A21BF4 /* MemeCollectionViewCell.swift */,
+				7748553F236A0D2300A372FA /* MemeDetailViewController.swift */,
+				776F88B32367D4CD007CEAD8 /* Meme.swift */,
 				7766F84D235A171A002EE2AB /* Assets.xcassets */,
 				7766F84F235A171A002EE2AB /* LaunchScreen.storyboard */,
 				7766F852235A171A002EE2AB /* Info.plist */,
@@ -318,6 +321,7 @@
 				776F88B22367CAF9007CEAD8 /* MemeTableViewController.swift in Sources */,
 				77ADF5DB23679CED00A21BF4 /* MemeCollectionViewController.swift in Sources */,
 				7766F847235A1718002EE2AB /* SceneDelegate.swift in Sources */,
+				77485540236A0D2300A372FA /* MemeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

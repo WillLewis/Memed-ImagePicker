@@ -10,15 +10,30 @@ import UIKit
 
 class MemeTableViewController: UITableViewController {
     
+    //MARK: Properties
     var memes: [AppDelegate.Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         return appDelegate.memesArray
     }
+    
+    private let image = UIImage(named: "Docs Icon")!.withRenderingMode(.alwaysTemplate)
+    private let topMessage = "Saved Memes"
+    private let bottomMessage = "You don't have any saved memes yet. Click the plus sign to create one."
+    
+    private var rows = [String]()
+    private let cellIdentifier = "Cell"
 
     
+    //MARK: Lifecylce
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        //load the placeholder background if table is empty
+        func setupEmptyBackgroundView() {
+            let emptyBackgroundView = EmptyBackgroundView(image: image, top: topMessage, bottom: bottomMessage)
+            self.tableView.backgroundView = emptyBackgroundView
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,12 +44,27 @@ class MemeTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.tableView.reloadData()
+        
+        //toggle visibility of EmptyBackground view if table is empty
+        if memes.count == 0 {
+            tableView.separatorStyle = .none
+            tableView.backgroundView?.isHidden = false
+        } else {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView?.isHidden = true
+        }
     }
-
+    
+    //MARK: Helper Functions
+    func setupTableView() {
+        tableView = UITableView.newAutoLayout()
+       // view.addSubview(tableView)
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memes.count
+            return memes.count
     }
 
     

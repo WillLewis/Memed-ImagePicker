@@ -1,16 +1,20 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.1)
+  - PureLayout (3.1.5)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - PureLayout
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
+    - PureLayout
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
+  PureLayout: 9b4ad47b2f0388c84ff534af23d96e720c1b875a
 
-PODFILE CHECKSUM: e0841422c0570bff0b5305fd8070e0a1f3dcf48f
+PODFILE CHECKSUM: 1a620f66c43d4885bca0f00301df48af612565df
 
 COCOAPODS: 1.8.4

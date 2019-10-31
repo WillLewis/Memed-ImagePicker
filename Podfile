@@ -7,7 +7,8 @@ target 'MemeMe0.1-ImagePicker' do
 
   # Pods for MemeMe0.1-ImagePicker
   pod 'IQKeyboardManagerSwift'
- 
+  pod 'PureLayout'
+  
   target 'MemeMe0.1-ImagePickerTests' do
     inherit! :search_paths
     # Pods for testing

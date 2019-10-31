@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import PureLayout
 
-class MemeTableViewController: UITableViewController {
+class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Properties
+    private var tableView: UITableView!
+    
     var memes: [AppDelegate.Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
@@ -20,20 +23,23 @@ class MemeTableViewController: UITableViewController {
     private let image = UIImage(named: "Docs Icon")!.withRenderingMode(.alwaysTemplate)
     private let topMessage = "Saved Memes"
     private let bottomMessage = "You don't have any saved memes yet. Click the plus sign to create one."
-    
-    private var rows = [String]()
-    private let cellIdentifier = "Cell"
 
     
     //MARK: Lifecylce
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func loadView(){
+        super.loadView()
+        //tableView.reloadData()
         setupTableView()
         //load the placeholder background if table is empty
         func setupEmptyBackgroundView() {
             let emptyBackgroundView = EmptyBackgroundView(image: image, top: topMessage, bottom: bottomMessage)
-            self.tableView.backgroundView = emptyBackgroundView
+            tableView.backgroundView = emptyBackgroundView
         }
+    }
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,32 +49,34 @@ class MemeTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.tableView.reloadData()
         
-        //toggle visibility of EmptyBackground view if table is empty
-        if memes.count == 0 {
-            tableView.separatorStyle = .none
-            tableView.backgroundView?.isHidden = false
-        } else {
-            tableView.separatorStyle = .singleLine
-            tableView.backgroundView?.isHidden = true
-        }
+        
     }
     
     //MARK: Helper Functions
     func setupTableView() {
         tableView = UITableView.newAutoLayout()
-       // view.addSubview(tableView)
+        view.addSubview(tableView)
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MemeTableCell")
     }
     
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return memes.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+             //toggle visibility of EmptyBackground view if table is empty
+            if memes.count == 0 {
+                tableView.separatorStyle = .none
+                tableView.backgroundView?.isHidden = false
+            } else {
+                tableView.separatorStyle = .singleLine
+                tableView.backgroundView?.isHidden = true
+            }
+        return memes.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableCell")!
         let specificMeme = memes[(indexPath as NSIndexPath).row]
         
@@ -77,7 +85,7 @@ class MemeTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         detailController.specificMeme = self.memes[(indexPath as NSIndexPath).row]

@@ -314,7 +314,7 @@
         <scene sceneID="nZK-7d-Igb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="srW-uZ-dBF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grid" selectedImage="square.grid.3x2" catalog="system" id="2Qf-vI-lnn"/>
+                    <tabBarItem key="tabBarItem" title="Grid" image="square.grid.2x2" catalog="system" selectedImage="square.grid.2x2" id="2Qf-vI-lnn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="98F-K8-A9J">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -333,7 +333,7 @@
         <scene sceneID="cp6-9w-Nlk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lzV-Ou-ra4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" selectedImage="text.justify" catalog="system" id="wI3-zU-vMB"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="text.justify" catalog="system" selectedImage="text.justify" id="wI3-zU-vMB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eaS-K0-MUl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -355,7 +355,7 @@
         <image name="photo" catalog="system" width="64" height="48"/>
         <image name="plus" catalog="system" width="64" height="58"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
-        <image name="square.grid.3x2" catalog="system" width="64" height="40"/>
+        <image name="square.grid.2x2" catalog="system" width="64" height="56"/>
         <image name="text.justify" catalog="system" width="64" height="50"/>
         <image name="trash" catalog="system" width="60" height="64"/>
     </resources>

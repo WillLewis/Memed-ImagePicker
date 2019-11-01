@@ -19,17 +19,16 @@ class MemeDetailViewController: UIViewController {
         return appDelegate.memesArray
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //self.parent!.navigationController!.popViewController(animated: true)
         self.tabBarController?.tabBar.isHidden = true
-        self.imageView!.image = specificMeme.memedImage
+        self.imageView?.image = specificMeme.memedImage
     }
    
     override func viewWillDisappear(_ animated: Bool) {

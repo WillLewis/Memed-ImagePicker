@@ -67,11 +67,13 @@ class MemeCollectionViewController: UICollectionViewController {
         detailController.specificMeme = self.memes[(indexPath as NSIndexPath).row]
        
         //self.present(detailController, animated: true, completion: nil)
-        self.navigationController!.popViewController(animated: true)
+        
         self.navigationController!.pushViewController(detailController, animated: true)
+       
         
         
     }
+    
     
 
  
